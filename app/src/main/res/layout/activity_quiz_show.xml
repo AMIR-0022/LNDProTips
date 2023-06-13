@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".QuestionContent.QuizShowActivity">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/quizShowAppBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        >
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/quizShowToolBar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@color/primary_color"
+            android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+            app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+            app:title="Quiz Practice Set"
+            />
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <LinearLayout
+        android:id="@+id/playTextLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="?attr/actionBarSize"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:paddingEnd="15dp"
+        android:gravity="center_vertical"
+        >
+        <TextView
+            android:id="@+id/tvTimer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="00:00"
+            android:textSize="18sp"
+            android:textColor="@color/white"
+            />
+        <ImageView
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_marginStart="10dp"
+            android:src="@drawable/baseline_clock_timer_24"
+            />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/questionLayout"
+        android:layout_width="match_parent"
+        android:layout_height="180dp"
+        android:layout_below="@id/quizShowAppBar"
+        android:background="@color/secondary_color"
+        android:gravity="center"
+        android:padding="20dp"
+        android:layout_marginTop="50dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginEnd="15dp"
+        >
+        <TextView
+            android:id="@+id/tvQuestion"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Demo Text"
+            android:textSize="16sp"
+            android:textAlignment="center"
+            />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tvQuestionMark"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="0/0"
+        android:textSize="16sp"
+        android:textColor="@color/primary_color"
+        android:background="@color/secondary_color"
+        android:padding="8dp"
+        android:layout_below="@id/quizShowAppBar"
+        android:layout_marginTop="55dp"
+        android:layout_marginStart="18dp"
+        />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnAnswer1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Ans 1"
+        android:layout_marginTop="30dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:background="@drawable/shape_btn_stroke0"
+        android:layout_below="@id/questionLayout"
+        />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnAnswer2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Ans 1"
+        android:layout_marginTop="20dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:background="@drawable/shape_btn_stroke0"
+        android:layout_below="@id/btnAnswer1"
+        />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnAnswer3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Ans 1"
+        android:layout_marginTop="20dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:background="@drawable/shape_btn_stroke0"
+        android:layout_below="@id/btnAnswer2"
+        />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnNext"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Next Question"
+        android:textColor="@color/white"
+        android:background="@drawable/shape_main_btn"
+        android:layout_marginTop="20dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_below="@id/btnAnswer3"
+        />
+
+</RelativeLayout>
